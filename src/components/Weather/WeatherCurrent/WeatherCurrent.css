@@ -1,0 +1,27 @@
+.weather-current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-current__summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-current__icon {
+  width: 96px;
+  height: 96px;
+}
+
+.weather-current__temp {
+  color: var(--color-value);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.weather-current__condition {
+  color: var(--color-text);
+}

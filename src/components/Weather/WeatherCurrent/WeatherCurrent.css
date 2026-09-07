@@ -25,3 +25,35 @@
 .weather-current__condition {
   color: var(--color-text);
 }
+
+.weather-current__ranges {
+  display: flex;
+  gap: 1rem;
+}
+
+.weather-current__range {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-current__range-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.weather-current__range-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-current__range-label {
+  color: var(--color-label);
+  font-size: 0.9rem;
+}
+
+.weather-current__range-value {
+  color: var(--color-value);
+  font-weight: 500;
+}

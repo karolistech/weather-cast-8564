@@ -43,3 +43,10 @@
   display: block;
   color: var(--color-icon);
 }
+
+@media (min-width: 600px) {
+  .weather-location {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

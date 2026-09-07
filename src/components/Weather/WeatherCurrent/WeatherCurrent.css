@@ -89,3 +89,37 @@
   color: var(--color-value);
   font-weight: 500;
 }
+
+@media (min-width: 600px) {
+  .weather-current {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "summary ranges"
+      "details details";
+  }
+
+  .weather-current__summary {
+    grid-area: summary;
+  }
+
+  .weather-current__ranges {
+    grid-area: ranges;
+    justify-content: center;
+  }
+
+  .weather-current__details {
+    grid-area: details;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+  }
+
+  .weather-current__icon {
+    width: 124px;
+    height: 124px;
+  }
+
+  .weather-current__temp {
+    font-size: 2.25rem;
+  }
+}

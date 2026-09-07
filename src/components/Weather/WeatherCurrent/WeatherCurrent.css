@@ -57,3 +57,35 @@
   color: var(--color-value);
   font-weight: 500;
 }
+
+.weather-current__details {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem clamp(1rem, 5vw, 3rem);
+}
+
+.weather-current__detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-current__detail-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.weather-current__detail-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-current__detail-label {
+  color: var(--color-label);
+  font-size: 0.9rem;
+}
+
+.weather-current__detail-value {
+  color: var(--color-value);
+  font-weight: 500;
+}

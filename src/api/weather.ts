@@ -1,6 +1,11 @@
 import type { Location } from "@/types/locations";
 import type { TempUnit } from "@/types/tempUnit";
 
+const icons = import.meta.glob<string>("@/assets/icons/weather-icons/*.svg", {
+  import: "default",
+  eager: true
+});
+
 export type WeatherLocation = {
   name: string;
   timezone: string;
@@ -214,4 +219,14 @@ export function getWeatherCondition(code: number, isDay: boolean): { description
     description: condition.description,
     icon: `${prefix}${condition.icon}`
   };
+}
+
+export function getWeatherIcon(name: string): string {
+  const key = Object.keys(icons).find(key => key.endsWith(`/weather-icons/${name}.svg`));
+
+  if (key === undefined) {
+    throw new Error(`Weather icon "${name}" was not found`);
+  }
+
+  return icons[key];
 }
